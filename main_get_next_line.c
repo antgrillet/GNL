@@ -2,11 +2,15 @@
 
 int	main(void)
 {
-	int fd;
+	int		fd;
+	char	*str;
 
 	fd = open("testfile.txt", O_RDONLY);
-	printf("%d", fd);
-	get_next_line(fd);
+	str = get_next_line(fd);
+	printf("%s", str);
+	str = get_next_line(fd);
+	printf("%s", str);
 	close(fd);
+	free(str);
 	return(0);
 }
