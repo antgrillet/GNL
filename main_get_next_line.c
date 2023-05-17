@@ -6,8 +6,9 @@ int	main(void)
 	char	*str;
 
 	fd = open("testfile.txt", O_RDONLY);
+	/*printf("%d", fd);*/
 	str = get_next_line(fd);
-	printf("%s", str);
+	printf("%s\n", str);
 	str = get_next_line(fd);
 	printf("%s", str);
 	close(fd);

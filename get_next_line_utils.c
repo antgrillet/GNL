@@ -6,7 +6,7 @@
 /*   By: agrillet <anto73grillet@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 10:22:20 by agrillet          #+#    #+#             */
-/*   Updated: 2023/05/11 19:10:58 by agrillet         ###   ########.fr       */
+/*   Updated: 2023/05/17 08:46:45 by agrillet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,25 @@ char	*ft_strchr(const char *s, int c)
 		return (&str[i]);
 	}
 	return (NULL);
+}
+
+char	*ft_strdup(const char *s)
+{
+	size_t	i;
+	char	*duplication;
+
+	i = 0;
+	duplication = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	if (duplication == NULL)
+		return (NULL);
+	else
+	{
+		while (i < ft_strlen((char *)s))
+		{
+			duplication[i] = s[i];
+			i++;
+		}
+		duplication[i] = '\0';
+	}
+	return (duplication);
 }
