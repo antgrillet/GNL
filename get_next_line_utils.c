@@ -6,7 +6,7 @@
 /*   By: agrillet <anto73grillet@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 10:22:20 by agrillet          #+#    #+#             */
-/*   Updated: 2023/05/17 08:46:45 by agrillet         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:02:08 by agrillet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,12 @@ char	*ft_strchr(const char *s, int c)
 	while (str[i])
 	{
 		if (str[i] == (char)c)
-			return (&str[i]);
+			return (&str[i + 1]);
 		i++;
 	}
 	if (str[i] == (char)c)
 	{
-		return (&str[i]);
+		return (&str[i + 1]);
 	}
 	return (NULL);
 }

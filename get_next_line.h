@@ -6,7 +6,7 @@
 /*   By: agrillet <anto73grillet@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:16:52 by agrillet          #+#    #+#             */
-/*   Updated: 2023/05/17 11:30:38 by agrillet         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:39:46 by agrillet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
-char	*read_and_line(int fd, char *buffer);
-char	*clean_stash(char *stash);
+char	*final_line(char *buffer);
+char	*read_file(int fd);
+char	*ft_strrchr(const char *s, int c);
 
 #endif

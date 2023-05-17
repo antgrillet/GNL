@@ -8,7 +8,15 @@ int	main(void)
 	fd = open("testfile.txt", O_RDONLY);
 	/*printf("%d", fd);*/
 	str = get_next_line(fd);
-	printf("%s\n", str);
+	printf("%s", str);
+	str = get_next_line(fd);
+	printf("%s", str);
+	str = get_next_line(fd);
+	printf("%s", str);
+	str = get_next_line(fd);
+	printf("%s", str);
+	str = get_next_line(fd);
+	printf("%s", str);
 	str = get_next_line(fd);
 	printf("%s", str);
 	close(fd);
