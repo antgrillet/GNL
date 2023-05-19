@@ -15,10 +15,10 @@ int	main(void)
 	printf("%s", str);
 	str = get_next_line(fd);
 	printf("%s", str);
-	str = get_next_line(fd);
+	/*str = get_next_line(fd);
 	printf("%s", str);
 	str = get_next_line(fd);
-	printf("%s", str);
+	printf("%s", str);*/
 	close(fd);
 	free(str);
 	return(0);

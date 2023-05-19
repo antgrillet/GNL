@@ -6,7 +6,7 @@
 /*   By: agrillet <anto73grillet@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 10:48:59 by agrillet          #+#    #+#             */
-/*   Updated: 2023/05/17 15:12:46 by agrillet         ###   ########.fr       */
+/*   Updated: 2023/05/19 10:56:07 by agrillet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ char *get_next_line(int fd)
 		buffer = ft_strdup("");
 	line = ft_strdup("");
 	stash = read_file(fd);
-	/*printf("%s", stash);*/
+	// printf("1:%s", stash);
 	buffer = ft_strjoin(buffer, stash);
-	/*printf("%s", buffer);*/
+	/*printf("2:%s", buffer);*/
 	line = final_line(buffer);
 	buffer = ft_strchr(buffer, '\n');
-	/*printf("%s et %d", buffer, 0);*/
+	/*printf("3:%s", buffer);*/
 	free(stash);
 	return(line);
 }
@@ -49,8 +49,8 @@ char	*read_file(int fd)
 		count = read(fd, tmp, BUFFER_SIZE);
 		if(ft_strchr(tmp, '\n'))
 		{
-			line = ft_strdup(ft_strjoin(line ,tmp));
-			line = ft_strdup(ft_strjoin(line, "\n"));
+			line = ft_strjoin(line ,tmp);
+			/*line = ft_strdup(ft_strjoin(line, "\n"));*/
 			free(tmp);
 			return(line);
 		}
@@ -60,7 +60,7 @@ char	*read_file(int fd)
 		/*printf("%s\n", line);*/
 	}
 	/*printf("%s", line);*/
-	line = ft_strjoin(line, tmp);
+	line = ft_strdup(ft_strjoin(line, tmp));
 	free(tmp);
 	return(line);
 }

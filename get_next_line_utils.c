@@ -6,13 +6,13 @@
 /*   By: agrillet <anto73grillet@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 10:22:20 by agrillet          #+#    #+#             */
-/*   Updated: 2023/05/17 15:02:08 by agrillet         ###   ########.fr       */
+/*   Updated: 2023/05/19 10:42:19 by agrillet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*s3;
 	size_t	i;
@@ -31,10 +31,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	while (s2[j])
-	{
-		s3[(i + j)] = s2[j];
-		j++;
-	}
+    {
+        s3[(i + j)] = s2[j];
+        j++;
+    }
 	return (s3[i + j] = '\0', s3);
 }
 
